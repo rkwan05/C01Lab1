@@ -4,7 +4,7 @@ import { View, TextInput, Button, StyleSheet, Keyboard } from 'react-native';
 const AddTask = ({ onAddTask }) => {
     const [title, setTitle] = useState('');
 
-    const handleTask = () => {
+    const handleAddTask = () => {
         if(title.trim != '') {
             onAddTask(title);
             setTitle('');
@@ -20,7 +20,7 @@ const AddTask = ({ onAddTask }) => {
                 onChangeText={(text) => setTitle(text)}
                 returnKeyType="done"
             />
-            <Button title="Add Task" onPress={handleTask}/>
+            <Button title="Add Task" onPress={handleAddTask}/>
         </View>
 
     );
